@@ -5,7 +5,8 @@ This is an academic paper project page template.
 Example project pages built using this template are:
 - https://horwitz.ai/probex
 - https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
+- https://horwitz.a
+
 - https://horwitz.ai/spectral_detuning
 - https://vision.huji.ac.il/ladeda
 - https://vision.huji.ac.il/dsire
