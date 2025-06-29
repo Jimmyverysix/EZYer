@@ -1,6 +1,29 @@
 body {
   font-family: 'Noto Sans', sans-serif;
 }
+/* 顶部窄图片容器样式 - 更窄版本 */
+.top-image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  height: 60px; /* 固定高度，使图片容器更窄 */
+}
+
+/* 顶部窄图片样式 - 更窄版本 */
+.top-header-image {
+  width: 100%;
+  height: 100px; /* 设置固定高度而不是最大高度 */
+  object-fit: cover;
+  object-position: center; /* 控制图片显示的部分 */
+  display: block;
+}
+
 
 
 .footer .icon-link {
@@ -28,8 +51,6 @@ body {
 }
 
 
-.publication-title {
-}
 
 .publication-banner {
   max-height: parent;
@@ -44,8 +65,6 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
@@ -67,8 +86,7 @@ body {
     font-weight: bolder;
 }
 
-.publication-authors {
-}
+
 
 .publication-authors a {
    color: hsl(204, 86%, 53%) !important;
@@ -82,12 +100,9 @@ body {
   display: inline-block;
 }
 
-.publication-banner img {
-}
 
-.publication-authors {
-  /*color: #4286f4;*/
-}
+
+
 
 .publication-video {
     position: relative;
@@ -107,8 +122,7 @@ body {
     height: 100%;
 }
 
-.publication-body img {
-}
+
 
 .results-carousel {
   overflow: hidden;
@@ -132,6 +146,323 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
+/* 内容区域通用样式 */
+.section {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content-text {
+  font-family: 'Noto Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 标题样式 */
+.section-title {
+  text-align: center;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 2rem;
+  color: #209CEE;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* 引导段落样式 */
+.lead-paragraph {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* 模块块样式 */
+.module-block {
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* 模块标题样式 */
+.module-title {
+  color: #209CEE;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  border-bottom: 2px solid #e6e9ef;
+  padding-bottom: 0.5rem;
+}
+
+/* 模块列表样式 */
+.module-list {
+  padding-left: 1.5rem;
+}
+
+.module-list li {
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+/* 图片容器样式 */
+.image-container {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+/* 居中图片样式 */
+.centered-image {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* 图片说明文字样式 */
+.image-caption {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .content-container {
+    width: 95%;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+  
+  .module-title {
+    font-size: 1.3rem;
+  }
+  
+  .lead-paragraph {
+    font-size: 1rem;
+  }
+  
+  .module-list li {
+    font-size: 0.95rem;
+  }
+}
 
 
+/* 图片容器 */
+.image-figure {
+  margin-bottom: 1.5rem;
+}
 
+/* 红色标题样式 */
+.image-caption1 {
+  color: #131212; /* Bulma的danger颜色，红色 */
+  font-weight: bold;
+  font-size: 1.1rem; /* 比正文稍大 */
+  margin-top: 0.5rem;
+  text-align: center;
+  padding: 0.25rem 0;
+}
+
+/* 将所有 is-3 级别的标题设为蓝色 */
+.title.is-3 {
+    color: #209CEE; /* Bulma 的默认蓝色 */
+}
+
+/* 图片说明文字样式 */
+.image-caption {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.image-caption p {
+  margin-bottom: 10px;
+}
+
+/* 调整图片项容器以适应长篇图例 */
+.image-item {
+  margin-bottom: 25px; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* 确保图像响应式且大小合适 */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 调整整个图片容器的样式，确保适当的间距和对齐 */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* 媒体查询，适应小屏幕 */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+  }
+  
+  .image-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .image-caption {
+    font-size: 13px;
+  }
+}
+
+/* 标题居中样式 */
+.section-title {
+  text-align: center;
+  margin: 40px auto;
+  width: 100%;
+}
+
+/* 标题样式 */
+.title.is-3.has-text-centered {
+  text-align: center;
+  margin: 0 0 25px;
+}
+
+/* Beamer 横向滚动容器样式 */
+.beamer-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 15px;
+  margin: 0 0 30px;
+  background: #f0f8ff; /* 浅蓝色背景，区分Notes */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 100%; /* 确保容器宽度为100% */
+  max-width: 100vw; /* 限制最大宽度为视口宽度 */
+  box-sizing: border-box; /* 确保padding不会导致超出100%宽度 */
+}
+
+.beamer-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.beamer-carousel::-webkit-scrollbar-track {
+  background: #e0f0ff;
+}
+.beamer-carousel::-webkit-scrollbar-thumb {
+  background: #a0c0ff;
+  border-radius: 3px;
+}
+.beamer-carousel:active {
+  cursor: grabbing;
+}
+
+/* Notes 横向滚动容器样式 */
+.notes-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0;
+  padding: 10px 5px;
+  margin: 0 0 30px;
+  background: #f8f8ff; /* 浅紫色背景，区分Beamer */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 100%; /* 确保容器宽度为100% */
+  max-width: 100vw; /* 限制最大宽度为视口宽度 */
+  box-sizing: border-box; /* 确保padding不会导致超出100%宽度 */
+}
+
+.notes-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.notes-carousel::-webkit-scrollbar-track {
+  background: #e8e8ff;
+}
+.notes-carousel::-webkit-scrollbar-thumb {
+  background: #c0c0ff;
+  border-radius: 3px;
+}
+.notes-carousel:active {
+  cursor: grabbing;
+}
+
+/* Beamer 图片项样式 */
+.beamer-item {
+  flex: 0 0 auto;
+  width: 45%;
+  text-align: center;
+}
+.beamer-image {
+  height: 300px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Notes 图片项样式 */
+.notes-item {
+  flex: 0 0 auto;
+  width: 25%; /* 减小宽度比例 */
+  text-align: center;
+  padding: 0; /* 移除内边距 */
+  margin-right: 5px; /* 使用非常小的右边距代替gap */
+  box-sizing: border-box; /* 确保边距和内边距包含在宽度内 */
+}
+
+/* 最后一个项目不需要右边距 */
+.notes-item:last-child {
+  margin-right: 0;
+}
+
+.notes-image {
+  height: 350px; /* Notes图片略小 */
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 图片标题样式 */
+.caption-small {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* 小屏幕响应式调整 */
+@media (max-width: 768px) {
+  .beamer-item, .notes-item {
+    width: 90%;
+  }
+  .beamer-image {
+    height: 190px;
+  }
+  .notes-image {
+    height: 170px;
+  }
+}
